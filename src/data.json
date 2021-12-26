@@ -1,0 +1,36 @@
+[
+  {
+    "id":1,
+    "name":"Akshit",
+    "family": "Hill",
+    "city":"Moradabad"
+  },
+
+  {
+    "id":2,
+    "name":"Nikita",
+    "family": "Steves",
+    "city":"Lucknow"
+  },
+
+  {
+    "id":3,
+    "name":"Deeksha",
+    "family": "Bakery",
+    "city":"Noida"
+  },
+
+  {
+    "id":4,
+    "name":"Ritesh",
+    "family": "Brown",
+    "city":"Delhi"
+  },
+
+  {
+    "id":5,
+    "name":"Eshika",
+    "family": "Miller",
+    "city":"Mumbai"
+  }
+]
