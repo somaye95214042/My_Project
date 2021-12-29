@@ -2,6 +2,7 @@ import React from 'react';
 import Home from "../Pages/Home";
 import Blog from "../Pages/Blog";
 import About from "../Pages/About";
+import Contact from "../Pages/Contact";
 import Article from "../Pages/Article";
 import {Routes, Route} from "react-router-dom";
 
@@ -12,6 +13,7 @@ const Contents = () => {
                 <Route path='/' exact={true} element={<Home/>} />
                 <Route path='/blog' element={<Blog/>} />
                 <Route path='/about' element={<About/>} />
+                <Route path='/contact' element={<Contact/>} />
                 <Route path='/blog/article/:id' element={<Article/>} />
             </Routes>
         </div>

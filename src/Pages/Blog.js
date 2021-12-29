@@ -5,33 +5,27 @@ import '../Styles/app.css';
 const Blog = () => {
 
     const [items, updateItems] = useState([]);
-    // const [isLoaded, updateIsLoaded] = useState(false);
+    const [isLoaded, updateIsLoaded] = useState(false);
 
     useEffect(() => {
         fetch('https://demo.phlox.pro/corporate-pro//wp-json/wp/v2/posts?_embed')
             .then(res => res.json())
             .then(result => {
-                // updateIsLoaded(true);
+                updateIsLoaded(true);
                 updateItems(result);
             });
     });
 
-    const Size = (item) => {
-        const Optimized_featured_image = item._embedded['wp:featuredmedia'][0].source_url
-    }
-
-
-    // if (!isLoaded) {
-    //     return <div>Loading ... </div>;
-    // } else {
+    if (!isLoaded) {
+        return <div>Loading ... </div>;
+    } else {
         return (
             <div>
                 <h1 className='blog'>Blog</h1>
                 <ul>
                     {items.map(item => (
                         <li key={item.id} className='list'>
-                            {console.log(item._embedded['wp:featuredmedia'][0].source_url)}
-                            <img src={item._embedded['wp:featuredmedia'][0].source_url} width="505" height="350"/>
+                            <img src={item._embedded['wp:featuredmedia'][0].source_url} alt={' '} width="505" height="350"/>
                             <div className='entry-main'>
                                 {/*<div className='title'>{item.title.rendered}</div>*/}
                                 <Link dangerouslySetInnerHTML={{__html: item.title.rendered}} className='title' to={`article/${item.id}`}></Link>
@@ -44,6 +38,6 @@ const Blog = () => {
             </div>
         );
     }
-// }
+}
 
 export default Blog;

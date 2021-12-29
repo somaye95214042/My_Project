@@ -22,7 +22,8 @@ const NameForm = (props) => {
 
     return (
         <div>
-            <input type="text" value={name} onChange={handleChange} />
+            <label placeholder="Your name.." style={{display: "block", marginTop: 50}} >Please enter your name here : </label>
+            <input type="text" className='add' value={name} onChange={handleChange} />
             <button type="button" className='insert' onClick={handleAdd}>
                 Add
             </button>

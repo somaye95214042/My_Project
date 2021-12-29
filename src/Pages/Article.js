@@ -17,13 +17,12 @@ const Article = () => {
             });
     });
 
-    if (Object.keys(article).length == 0 ) {
+    if (Object.keys(article).length === 0 ) {
         return <div>Loading ... </div>;
     } else {
         return (
             <div className='featured_image'>
-                <img src={article._embedded['wp:featuredmedia'][0].source_url} width="768" height="505"/>
-                {/*<h1 className='title'>{article.title.author}</h1>*/}
+                <img src={article._embedded['wp:featuredmedia'][0].source_url} alt={''} width="768" height="505"/>
                 <h1 dangerouslySetInnerHTML={{__html: article.title.rendered}} className='article_title'></h1>
                 <p dangerouslySetInnerHTML={{__html: article.content.rendered}} className='article_content'></p>
 

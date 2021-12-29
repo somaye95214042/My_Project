@@ -7,7 +7,7 @@ const Footer = () => {
         <div className={'footer'}>
 
             <div className={'firstColumn'}>
-                <img src={logo} width="200" height="100"/>
+                <img src={logo} alt={'logo'} width="200" height="100"/>
                 <span>
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some formed humour

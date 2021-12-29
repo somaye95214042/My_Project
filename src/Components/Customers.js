@@ -6,7 +6,7 @@ import '../Styles/app.css';
 const Customers = () => {
 
     const [list, updateList] = useState(JasonData);
-    const [name, setName] = React.useState('');
+    // const [name, setName] = React.useState('');
 
 
     function handleRemoveItem (index) {
@@ -20,15 +20,15 @@ const Customers = () => {
     }
 
 
-    function handleChange(event) {
-        setName(event.target.value);
-    }
+    // function handleChange(event) {
+    //     setName(event.target.value);
+    // }
 
-    function handleAdd() {
-        const newList = list.concat({ name });
-        updateList(newList);
-        setName('');
-    }
+    // function handleAdd() {
+    //     const newList = list.concat({ name });
+    //     updateList(newList);
+    //     setName('');
+    // }
 
     return (
         <div>

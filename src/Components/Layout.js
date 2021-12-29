@@ -15,7 +15,7 @@ const Layout = () => {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        const interval = setInterval(() => {
+        setInterval(() => {
             setShowModal(true)
         }, 3000);
     }, []);
